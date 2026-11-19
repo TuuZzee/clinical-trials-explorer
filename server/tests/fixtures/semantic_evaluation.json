@@ -1,0 +1,381 @@
+[
+  {
+    "id": "multi_constraint_supported",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "aspirin",
+        "condition": "asthma",
+        "country": "France",
+        "sponsor": "Acme",
+        "trial_status": "RECRUITING",
+        "start_year": 2020,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "omitted_drug_name",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "condition": "asthma",
+        "country": "France",
+        "sponsor": "Acme",
+        "trial_status": "RECRUITING",
+        "start_year": 2020,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_condition",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "aspirin",
+        "country": "France",
+        "sponsor": "Acme",
+        "trial_status": "RECRUITING",
+        "start_year": 2020,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_country",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "aspirin",
+        "condition": "asthma",
+        "sponsor": "Acme",
+        "trial_status": "RECRUITING",
+        "start_year": 2020,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_sponsor",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "aspirin",
+        "condition": "asthma",
+        "country": "France",
+        "trial_status": "RECRUITING",
+        "start_year": 2020,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_trial_status",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "aspirin",
+        "condition": "asthma",
+        "country": "France",
+        "sponsor": "Acme",
+        "start_year": 2020,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_start_year",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "aspirin",
+        "condition": "asthma",
+        "country": "France",
+        "sponsor": "Acme",
+        "trial_status": "RECRUITING",
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_end_year",
+    "query": "Show phases of recruiting trials for condition asthma involving aspirin located in France sponsored by Acme since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "aspirin",
+        "condition": "asthma",
+        "country": "France",
+        "sponsor": "Acme",
+        "trial_status": "RECRUITING",
+        "start_year": 2020
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "phase_filter",
+    "query": "Show phases of Phase 3 asthma trials",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "ranking",
+    "query": "Show the top 5 phase categories for asthma trials",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "monthly",
+    "query": "Show monthly trial starts for asthma",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "posting_date",
+    "query": "Show trial counts by posting date since 2020",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "day_precision",
+    "query": "Show phase counts since 2020-03-01",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "efficacy",
+    "query": "Compare efficacy of aspirin and ibuprofen",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "outcome",
+    "query": "Show median overall survival for aspirin",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "unavailable",
+    "query": "Show the stock price of sponsors by phase",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "network_type",
+    "query": "Show sponsor-device networks for asthma trials",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "partnership",
+    "query": "Show commercial partnerships between sponsors and drugs",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "ambiguous_comparison",
+    "query": "Compare trial phases",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "ambiguous_ongoing",
+    "query": "Show ongoing trials by phase",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "strict_year_bounds",
+    "query": "Show trial phases after 2020 and before 2024",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "start_year": 2021,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "multiple_statuses",
+    "query": "Show phases of recruiting or completed trials",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "trial_status": "RECRUITING"
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "unsupported_query"
+  },
+  {
+    "id": "wrong_year_bound",
+    "query": "Show trial phases since 2020 through 2023",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "start_year": 2023,
+        "end_year": 2023
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "bare_condition_omitted",
+    "query": "Show phases of breast cancer trials involving pembrolizumab",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "drug_name": "pembrolizumab"
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  }
+]

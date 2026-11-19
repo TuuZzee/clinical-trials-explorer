@@ -1,0 +1,120 @@
+{
+  "visualization": {
+    "type": "network_graph",
+    "title": "Lead sponsor–drug co-occurrence in registered studies",
+    "encoding": {
+      "node_id": {
+        "field": "id",
+        "type": "nominal",
+        "title": "Stable node ID"
+      },
+      "node_label": {
+        "field": "label",
+        "type": "nominal",
+        "title": "Reported entity label"
+      },
+      "node_type": {
+        "field": "entity_type",
+        "type": "nominal",
+        "title": "Sponsor or drug"
+      },
+      "source": {
+        "field": "source",
+        "type": "nominal",
+        "title": "Lead sponsor node ID"
+      },
+      "target": {
+        "field": "target",
+        "type": "nominal",
+        "title": "Drug node ID"
+      },
+      "weight": {
+        "field": "weight",
+        "type": "quantitative",
+        "title": "Distinct supporting studies"
+      }
+    },
+    "data": {
+      "nodes": [
+        {
+          "id": "drug:ae07d9039265e0f50974544d029a8b5a362a65216eb16f517e6bb6f150f33373",
+          "label": "Synthetic Drug A",
+          "entity_type": "drug"
+        },
+        {
+          "id": "drug:d2bc152d812c67ecb9af78cb190eb52e07b0bccfac8b688bc24e795c8d4bc63d",
+          "label": "Synthetic Drug B",
+          "entity_type": "drug"
+        },
+        {
+          "id": "sponsor:046f4033ddecd04a7b93c2849dee7707b053f3901b34a27a7a31a87789fab806",
+          "label": "Synthetic Trial Center",
+          "entity_type": "sponsor"
+        },
+        {
+          "id": "sponsor:45cb63974c7c362272917bc5d7dc0f507fd1c034442fb647fcdd8f6fe4f936c6",
+          "label": "Synthetic Research Institute",
+          "entity_type": "sponsor"
+        }
+      ],
+      "edges": [
+        {
+          "source": "sponsor:45cb63974c7c362272917bc5d7dc0f507fd1c034442fb647fcdd8f6fe4f936c6",
+          "target": "drug:ae07d9039265e0f50974544d029a8b5a362a65216eb16f517e6bb6f150f33373",
+          "weight": 2
+        },
+        {
+          "source": "sponsor:45cb63974c7c362272917bc5d7dc0f507fd1c034442fb647fcdd8f6fe4f936c6",
+          "target": "drug:d2bc152d812c67ecb9af78cb190eb52e07b0bccfac8b688bc24e795c8d4bc63d",
+          "weight": 1
+        },
+        {
+          "source": "sponsor:046f4033ddecd04a7b93c2849dee7707b053f3901b34a27a7a31a87789fab806",
+          "target": "drug:ae07d9039265e0f50974544d029a8b5a362a65216eb16f517e6bb6f150f33373",
+          "weight": 1
+        }
+      ]
+    }
+  },
+  "meta": {
+    "source": "ClinicalTrials.gov Data API v2",
+    "filters": {
+      "drug_name": null,
+      "condition": null,
+      "country": null,
+      "sponsor": "Synthetic Research Institute",
+      "trial_status": null,
+      "start_year": null,
+      "end_year": null
+    },
+    "counting_unit": "unique NCT IDs per lead sponsor-drug edge",
+    "grouping": "sponsor_drug",
+    "retrieved_studies": 3,
+    "total_matches": 3,
+    "complete_results": true,
+    "warnings": [
+      "Edges represent lead sponsor and DRUG intervention co-occurrence within registered studies, not commercial partnerships, efficacy, or causal relationships.",
+      "Only reported DRUG interventions are included; BIOLOGICAL and other types are excluded. Labels are matched exactly without entity resolution. A study may support several edges.",
+      "Sponsor search includes collaborators; graph nodes always use the lead sponsor."
+    ],
+    "comparison_field": null,
+    "cohorts": [],
+    "overlap_studies": null,
+    "histogram": null,
+    "graph": {
+      "included_studies": 3,
+      "excluded_studies": 0,
+      "missing_sponsor_studies": 0,
+      "no_named_drug_studies": 0,
+      "unnamed_drug_studies": 0,
+      "total_nodes": 4,
+      "total_edges": 3,
+      "displayed_nodes": 4,
+      "displayed_edges": 3,
+      "omitted_nodes": 0,
+      "omitted_edges": 0,
+      "display_truncated": false,
+      "edge_limit": 200
+    }
+  }
+}

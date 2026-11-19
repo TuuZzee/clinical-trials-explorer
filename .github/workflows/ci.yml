@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: "0.13.6"
+          python-version: "3.12"
+          enable-cache: true
+          cache-dependency-glob: server/uv.lock
+      - name: Install locked Python 3.12 dependencies with uv, including dev tools
+        run: uv sync --locked --extra dev --python 3.12
+      - name: Run backend tests with pytest and treat warnings as errors
+        run: uv run --locked pytest -q -W error
+      - name: Lint backend code, tests, and scripts with Ruff
+        run: uv run --locked ruff check app tests scripts
+      - name: Check formatting of backend code, tests, and scripts with Ruff
+        run: uv run --locked ruff format --check app tests scripts
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: client
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - name: Install frontend dependencies from the npm lockfile
+        run: npm ci
+      - name: Generate Next.js types and check TypeScript
+        run: npm run typecheck
+      - name: Lint frontend code with ESLint and fail on warnings
+        run: npm run lint
+      - name: Check frontend formatting with Prettier
+        run: npm run format
+      - name: Build the Next.js app for production
+        run: npm run build
+      - name: Install Chromium and its system dependencies for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Run frontend browser tests with Playwright
+        run: npm test

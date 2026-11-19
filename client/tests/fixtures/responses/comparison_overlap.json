@@ -1,0 +1,105 @@
+{
+  "visualization": {
+    "type": "grouped_bar_chart",
+    "title": "Study counts by clinical trial phase: Synthetic Drug A versus Synthetic Drug B",
+    "encoding": {
+      "x": {
+        "field": "phase",
+        "type": "ordinal",
+        "title": "Clinical trial phase"
+      },
+      "y": {
+        "field": "trial_count",
+        "type": "quantitative",
+        "title": "Unique studies"
+      },
+      "series": {
+        "field": "cohort",
+        "type": "nominal",
+        "title": "Cohort"
+      }
+    },
+    "data": [
+      {
+        "phase": "Phase 1",
+        "trial_count": 1,
+        "cohort": "Synthetic Drug A"
+      },
+      {
+        "phase": "Phase 1",
+        "trial_count": 0,
+        "cohort": "Synthetic Drug B"
+      },
+      {
+        "phase": "Phase 2",
+        "trial_count": 2,
+        "cohort": "Synthetic Drug A"
+      },
+      {
+        "phase": "Phase 2",
+        "trial_count": 1,
+        "cohort": "Synthetic Drug B"
+      }
+    ]
+  },
+  "meta": {
+    "source": "ClinicalTrials.gov Data API v2",
+    "filters": {
+      "drug_name": null,
+      "condition": null,
+      "country": null,
+      "sponsor": "Synthetic Research Institute",
+      "trial_status": null,
+      "start_year": null,
+      "end_year": null
+    },
+    "counting_unit": "unique NCT IDs per category per cohort",
+    "grouping": "phase",
+    "retrieved_studies": 3,
+    "total_matches": null,
+    "complete_results": true,
+    "warnings": [
+      "Intervention filters use registry search matching, not verified exact drug identity.",
+      "Sponsor search includes sponsors and collaborators.",
+      "Cohorts are independent searches; overlapping NCT IDs contribute to each cohort. retrieved_studies counts the distinct union, not the sum. Zeros mean an absent category in a completely retrieved cohort."
+    ],
+    "comparison_field": "drug_name",
+    "cohorts": [
+      {
+        "label": "Synthetic Drug A",
+        "filters": {
+          "drug_name": "Synthetic Drug A",
+          "condition": null,
+          "country": null,
+          "sponsor": "Synthetic Research Institute",
+          "trial_status": null,
+          "start_year": null,
+          "end_year": null
+        },
+        "retrieved_studies": 3,
+        "total_matches": 3,
+        "complete_results": true,
+        "warnings": []
+      },
+      {
+        "label": "Synthetic Drug B",
+        "filters": {
+          "drug_name": "Synthetic Drug B",
+          "condition": null,
+          "country": null,
+          "sponsor": "Synthetic Research Institute",
+          "trial_status": null,
+          "start_year": null,
+          "end_year": null
+        },
+        "retrieved_studies": 1,
+        "total_matches": 1,
+        "complete_results": true,
+        "warnings": []
+      }
+    ],
+    "overlap_studies": 1,
+    "histogram": null,
+    "graph": null
+  }
+}

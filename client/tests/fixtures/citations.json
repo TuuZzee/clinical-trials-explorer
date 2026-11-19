@@ -1,0 +1,593 @@
+{
+  "phase": {
+    "visualization": {
+      "type": "bar_chart",
+      "title": "Study phase distribution",
+      "encoding": {
+        "x": {
+          "field": "phase",
+          "type": "ordinal",
+          "title": "Clinical trial phase"
+        },
+        "y": {
+          "field": "trial_count",
+          "type": "quantitative",
+          "title": "Unique studies"
+        },
+        "series": null
+      },
+      "data": [
+        {
+          "phase": "Phase 2",
+          "trial_count": 2
+        }
+      ]
+    },
+    "meta": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "filters": {
+        "drug_name": null,
+        "condition": null,
+        "country": null,
+        "sponsor": "Synthetic Research Institute",
+        "trial_status": null,
+        "start_year": null,
+        "end_year": null
+      },
+      "counting_unit": "unique NCT IDs per phase",
+      "grouping": "phase",
+      "retrieved_studies": 2,
+      "total_matches": 2,
+      "complete_results": true,
+      "warnings": ["Sponsor search includes sponsors and collaborators."],
+      "comparison_field": null,
+      "cohorts": [],
+      "overlap_studies": null,
+      "histogram": null,
+      "graph": null
+    },
+    "citations": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "reference_count": 2,
+      "datums": [
+        {
+          "datum_path": "/visualization/data/0",
+          "cohort": null,
+          "basis": "source_fields",
+          "supporting_study_count": 2,
+          "studies": [
+            {
+              "nct_id": "NCT99991001",
+              "study_url": "https://clinicaltrials.gov/study/NCT99991001",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99991001"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/designModule/phases/0",
+                  "value": "PHASE2"
+                }
+              ]
+            },
+            {
+              "nct_id": "NCT99991002",
+              "study_url": "https://clinicaltrials.gov/study/NCT99991002",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99991002"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/designModule/phases/0",
+                  "value": "PHASE2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nodes": []
+    }
+  },
+  "missing": {
+    "visualization": {
+      "type": "bar_chart",
+      "title": "Study phase distribution",
+      "encoding": {
+        "x": {
+          "field": "phase",
+          "type": "ordinal",
+          "title": "Clinical trial phase"
+        },
+        "y": {
+          "field": "trial_count",
+          "type": "quantitative",
+          "title": "Unique studies"
+        },
+        "series": null
+      },
+      "data": [
+        {
+          "phase": "Missing phase",
+          "trial_count": 4
+        }
+      ]
+    },
+    "meta": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "filters": {
+        "drug_name": null,
+        "condition": null,
+        "country": null,
+        "sponsor": null,
+        "trial_status": null,
+        "start_year": null,
+        "end_year": null
+      },
+      "counting_unit": "unique NCT IDs per phase",
+      "grouping": "phase",
+      "retrieved_studies": 4,
+      "total_matches": 4,
+      "complete_results": true,
+      "warnings": ["4 studies have no reported phase and appear as 'Missing phase'."],
+      "comparison_field": null,
+      "cohorts": [],
+      "overlap_studies": null,
+      "histogram": null,
+      "graph": null
+    },
+    "citations": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "reference_count": 4,
+      "datums": [
+        {
+          "datum_path": "/visualization/data/0",
+          "cohort": null,
+          "basis": "source_fields",
+          "supporting_study_count": 4,
+          "studies": [
+            {
+              "nct_id": "NCT99992001",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992001",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992001"
+                },
+                {
+                  "kind": "absent",
+                  "path": "/protocolSection/designModule/phases",
+                  "ancestor": {
+                    "kind": "object_keys",
+                    "path": "/protocolSection/designModule",
+                    "keys": ["enrollmentInfo"]
+                  }
+                }
+              ]
+            },
+            {
+              "nct_id": "NCT99992002",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992002",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992002"
+                },
+                {
+                  "kind": "null",
+                  "path": "/protocolSection/designModule/phases",
+                  "value": null
+                }
+              ]
+            },
+            {
+              "nct_id": "NCT99992003",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992003",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992003"
+                },
+                {
+                  "kind": "empty",
+                  "path": "/protocolSection/designModule/phases",
+                  "value": []
+                }
+              ]
+            },
+            {
+              "nct_id": "NCT99992004",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992004",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992004"
+                },
+                {
+                  "kind": "invalid",
+                  "path": "/protocolSection/designModule/phases",
+                  "value": 17
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nodes": []
+    }
+  },
+  "comparison": {
+    "visualization": {
+      "type": "grouped_bar_chart",
+      "title": "Study counts by clinical trial phase: Drug A versus Drug B",
+      "encoding": {
+        "x": {
+          "field": "phase",
+          "type": "ordinal",
+          "title": "Clinical trial phase"
+        },
+        "y": {
+          "field": "trial_count",
+          "type": "quantitative",
+          "title": "Unique studies"
+        },
+        "series": {
+          "field": "cohort",
+          "type": "nominal",
+          "title": "Cohort"
+        }
+      },
+      "data": [
+        {
+          "phase": "Phase 1",
+          "trial_count": 1,
+          "cohort": "Drug A"
+        },
+        {
+          "phase": "Phase 1",
+          "trial_count": 0,
+          "cohort": "Drug B"
+        },
+        {
+          "phase": "Phase 2",
+          "trial_count": 1,
+          "cohort": "Drug A"
+        },
+        {
+          "phase": "Phase 2",
+          "trial_count": 1,
+          "cohort": "Drug B"
+        }
+      ]
+    },
+    "meta": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "filters": {
+        "drug_name": null,
+        "condition": null,
+        "country": null,
+        "sponsor": null,
+        "trial_status": null,
+        "start_year": null,
+        "end_year": null
+      },
+      "counting_unit": "unique NCT IDs per category per cohort",
+      "grouping": "phase",
+      "retrieved_studies": 2,
+      "total_matches": null,
+      "complete_results": true,
+      "warnings": [
+        "Intervention filters use registry search matching, not verified exact drug identity.",
+        "Cohorts are independent searches; overlapping NCT IDs contribute to each cohort. retrieved_studies counts the distinct union, not the sum. Zeros mean an absent category in a completely retrieved cohort."
+      ],
+      "comparison_field": "drug_name",
+      "cohorts": [
+        {
+          "label": "Drug A",
+          "filters": {
+            "drug_name": "Drug A",
+            "condition": null,
+            "country": null,
+            "sponsor": null,
+            "trial_status": null,
+            "start_year": null,
+            "end_year": null
+          },
+          "retrieved_studies": 2,
+          "total_matches": 2,
+          "complete_results": true,
+          "warnings": []
+        },
+        {
+          "label": "Drug B",
+          "filters": {
+            "drug_name": "Drug B",
+            "condition": null,
+            "country": null,
+            "sponsor": null,
+            "trial_status": null,
+            "start_year": null,
+            "end_year": null
+          },
+          "retrieved_studies": 1,
+          "total_matches": 1,
+          "complete_results": true,
+          "warnings": []
+        }
+      ],
+      "overlap_studies": 1,
+      "histogram": null,
+      "graph": null
+    },
+    "citations": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "reference_count": 3,
+      "datums": [
+        {
+          "datum_path": "/visualization/data/0",
+          "cohort": "Drug A",
+          "basis": "source_fields",
+          "supporting_study_count": 1,
+          "studies": [
+            {
+              "nct_id": "NCT99992001",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992001",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992001"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/designModule/phases/0",
+                  "value": "PHASE1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "datum_path": "/visualization/data/1",
+          "cohort": "Drug B",
+          "basis": "complete_cohort_zero",
+          "supporting_study_count": 0,
+          "studies": []
+        },
+        {
+          "datum_path": "/visualization/data/2",
+          "cohort": "Drug A",
+          "basis": "source_fields",
+          "supporting_study_count": 1,
+          "studies": [
+            {
+              "nct_id": "NCT99992002",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992002",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992002"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/designModule/phases/0",
+                  "value": "PHASE2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "datum_path": "/visualization/data/3",
+          "cohort": "Drug B",
+          "basis": "source_fields",
+          "supporting_study_count": 1,
+          "studies": [
+            {
+              "nct_id": "NCT99992002",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992002",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992002"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/designModule/phases/0",
+                  "value": "PHASE2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nodes": []
+    }
+  },
+  "network": {
+    "visualization": {
+      "type": "network_graph",
+      "title": "Lead sponsor–drug co-occurrence in registered studies",
+      "encoding": {
+        "node_id": {
+          "field": "id",
+          "type": "nominal",
+          "title": "Stable node ID"
+        },
+        "node_label": {
+          "field": "label",
+          "type": "nominal",
+          "title": "Reported entity label"
+        },
+        "node_type": {
+          "field": "entity_type",
+          "type": "nominal",
+          "title": "Sponsor or drug"
+        },
+        "source": {
+          "field": "source",
+          "type": "nominal",
+          "title": "Lead sponsor node ID"
+        },
+        "target": {
+          "field": "target",
+          "type": "nominal",
+          "title": "Drug node ID"
+        },
+        "weight": {
+          "field": "weight",
+          "type": "quantitative",
+          "title": "Distinct supporting studies"
+        }
+      },
+      "data": {
+        "nodes": [
+          {
+            "id": "drug:0b6c9b4a86b867c8ad4a767205abb5efcfab9fadbd86c78ebea6840ac35577c2",
+            "label": "Drug A",
+            "entity_type": "drug"
+          },
+          {
+            "id": "sponsor:17ef13ca377d0096f4c572e9c046adb676e7d5346cb6f6000459fa0718f1dc8d",
+            "label": "Sponsor A",
+            "entity_type": "sponsor"
+          }
+        ],
+        "edges": [
+          {
+            "source": "sponsor:17ef13ca377d0096f4c572e9c046adb676e7d5346cb6f6000459fa0718f1dc8d",
+            "target": "drug:0b6c9b4a86b867c8ad4a767205abb5efcfab9fadbd86c78ebea6840ac35577c2",
+            "weight": 2
+          }
+        ]
+      }
+    },
+    "meta": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "filters": {
+        "drug_name": null,
+        "condition": null,
+        "country": null,
+        "sponsor": null,
+        "trial_status": null,
+        "start_year": null,
+        "end_year": null
+      },
+      "counting_unit": "unique NCT IDs per lead sponsor-drug edge",
+      "grouping": "sponsor_drug",
+      "retrieved_studies": 2,
+      "total_matches": 2,
+      "complete_results": true,
+      "warnings": [
+        "Edges represent lead sponsor and DRUG intervention co-occurrence within registered studies, not commercial partnerships, efficacy, or causal relationships.",
+        "Only reported DRUG interventions are included; BIOLOGICAL and other types are excluded. Labels are matched exactly without entity resolution. A study may support several edges."
+      ],
+      "comparison_field": null,
+      "cohorts": [],
+      "overlap_studies": null,
+      "histogram": null,
+      "graph": {
+        "included_studies": 2,
+        "excluded_studies": 0,
+        "missing_sponsor_studies": 0,
+        "no_named_drug_studies": 0,
+        "unnamed_drug_studies": 0,
+        "total_nodes": 2,
+        "total_edges": 1,
+        "displayed_nodes": 2,
+        "displayed_edges": 1,
+        "omitted_nodes": 0,
+        "omitted_edges": 0,
+        "display_truncated": false,
+        "edge_limit": 200
+      }
+    },
+    "citations": {
+      "source": "ClinicalTrials.gov Data API v2",
+      "reference_count": 2,
+      "datums": [
+        {
+          "datum_path": "/visualization/data/edges/0",
+          "cohort": null,
+          "basis": "source_fields",
+          "supporting_study_count": 2,
+          "studies": [
+            {
+              "nct_id": "NCT99992001",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992001",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992001"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/armsInterventionsModule/interventions/0/name",
+                  "value": " Drug A "
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/armsInterventionsModule/interventions/0/type",
+                  "value": "DRUG"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/sponsorCollaboratorsModule/leadSponsor/name",
+                  "value": " Sponsor A "
+                }
+              ]
+            },
+            {
+              "nct_id": "NCT99992002",
+              "study_url": "https://clinicaltrials.gov/study/NCT99992002",
+              "fields": [
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/identificationModule/nctId",
+                  "value": "NCT99992002"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/armsInterventionsModule/interventions/0/name",
+                  "value": " Drug A "
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/armsInterventionsModule/interventions/0/type",
+                  "value": "DRUG"
+                },
+                {
+                  "kind": "value",
+                  "path": "/protocolSection/sponsorCollaboratorsModule/leadSponsor/name",
+                  "value": " Sponsor A "
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nodes": [
+        {
+          "node_id": "drug:0b6c9b4a86b867c8ad4a767205abb5efcfab9fadbd86c78ebea6840ac35577c2",
+          "edge_paths": ["/visualization/data/edges/0"]
+        },
+        {
+          "node_id": "sponsor:17ef13ca377d0096f4c572e9c046adb676e7d5346cb6f6000459fa0718f1dc8d",
+          "edge_paths": ["/visualization/data/edges/0"]
+        }
+      ]
+    }
+  }
+}

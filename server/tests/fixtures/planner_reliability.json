@@ -1,0 +1,280 @@
+[
+  {
+    "id": "phase_reported",
+    "query": "Show phases of breast cancer trials",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "condition": "breast cancer"
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "phase_equivalent",
+    "query": "Show a distribution of clinical trial phases for breast cancer",
+    "plan": {
+      "intent": "distribution",
+      "measure": "study_count",
+      "filters": {
+        "condition": "breast cancer"
+      },
+      "group_by": "phase",
+      "chart_type": "bar_chart",
+      "comparison": null
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "network_reported",
+    "query": "Show a network of lead sponsors and drugs",
+    "plan": {
+      "intent": "relationship",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "sponsor_drug",
+      "chart_type": "network_graph",
+      "comparison": null
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "network_equivalent",
+    "query": "Show lead sponsor-to-drug relationships as a network",
+    "plan": {
+      "intent": "relationship",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "sponsor_drug",
+      "chart_type": "network_graph",
+      "comparison": null
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "comparison_versus",
+    "query": "Compare phases of nivolumab versus ipilimumab trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "drug_name",
+        "values": [
+          "nivolumab",
+          "ipilimumab"
+        ]
+      }
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "comparison_vs",
+    "query": "Compare phases of nivolumab vs ipilimumab trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "drug_name",
+        "values": [
+          "nivolumab",
+          "ipilimumab"
+        ]
+      }
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "comparison_vs_dot",
+    "query": "Compare phases of nivolumab vs. ipilimumab trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "drug_name",
+        "values": [
+          "nivolumab",
+          "ipilimumab"
+        ]
+      }
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "conditions_versus",
+    "query": "Compare phases of breast cancer versus lung cancer trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "condition",
+        "values": [
+          "breast cancer",
+          "lung cancer"
+        ]
+      }
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "conditions_vs",
+    "query": "Compare phases of breast cancer vs lung cancer trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "condition",
+        "values": [
+          "breast cancer",
+          "lung cancer"
+        ]
+      }
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "conditions_vs_dot",
+    "query": "Compare phases of breast cancer vs. lung cancer trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "condition",
+        "values": [
+          "breast cancer",
+          "lung cancer"
+        ]
+      }
+    },
+    "expected": "supported"
+  },
+  {
+    "id": "omitted_descriptor",
+    "query": "Compare phases of metastatic nivolumab vs. ipilimumab trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "drug_name",
+        "values": [
+          "nivolumab",
+          "ipilimumab"
+        ]
+      }
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_condition_modifier",
+    "query": "Compare phases of pediatric breast cancer versus lung cancer trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "condition",
+        "values": [
+          "breast cancer",
+          "lung cancer"
+        ]
+      }
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_year",
+    "query": "Compare phases of nivolumab versus ipilimumab trials since 2020",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "drug_name",
+        "values": [
+          "nivolumab",
+          "ipilimumab"
+        ]
+      }
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "ungrounded_member",
+    "query": "Compare phases of nivolumab versus ipilimumab trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "drug_name",
+        "values": [
+          "nivolumab",
+          "pembrolizumab"
+        ]
+      }
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "unspecified_relationship",
+    "query": "Show trial relationships as a network",
+    "plan": {
+      "intent": "relationship",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "sponsor_drug",
+      "chart_type": "network_graph",
+      "comparison": null
+    },
+    "expected": "ambiguous_query"
+  },
+  {
+    "id": "omitted_modifier_after_vs_dot",
+    "query": "Compare phases of nivolumab vs. resistant ipilimumab trials",
+    "plan": {
+      "intent": "comparison",
+      "measure": "study_count",
+      "filters": {},
+      "group_by": "phase",
+      "chart_type": "grouped_bar_chart",
+      "comparison": {
+        "field": "drug_name",
+        "values": [
+          "nivolumab",
+          "ipilimumab"
+        ]
+      }
+    },
+    "expected": "ambiguous_query"
+  }
+]

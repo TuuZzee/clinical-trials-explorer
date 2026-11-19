@@ -1,0 +1,68 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT99990001"
+    },
+    "statusModule": {
+      "overallStatus": "ACTIVE_NOT_RECRUITING",
+      "startDateStruct": {
+        "date": "2022-08-17",
+        "type": "ACTUAL"
+      }
+    },
+    "designModule": {
+      "phases": [
+        "PHASE2"
+      ],
+      "enrollmentInfo": {
+        "count": 137,
+        "type": "ACTUAL"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "leadSponsor": {
+        "name": "Synthetic Research Institute",
+        "class": "INDUSTRY"
+      }
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Fixture Condition Alpha",
+        "Fixture Condition Beta"
+      ]
+    },
+    "armsInterventionsModule": {
+      "interventions": [
+        {
+          "name": "Synthetic Compound A",
+          "type": "DRUG"
+        },
+        {
+          "name": "Synthetic Compound B",
+          "type": "DRUG"
+        },
+        {
+          "name": "Synthetic Agent C",
+          "type": "BIOLOGICAL"
+        },
+        {
+          "name": "Synthetic Procedure D",
+          "type": "PROCEDURE"
+        }
+      ]
+    },
+    "contactsLocationsModule": {
+      "locations": [
+        {
+          "country": "Canada"
+        },
+        {
+          "country": "Canada"
+        },
+        {
+          "country": "Canada"
+        }
+      ]
+    }
+  }
+}

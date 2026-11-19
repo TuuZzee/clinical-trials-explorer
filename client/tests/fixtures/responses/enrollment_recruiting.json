@@ -1,0 +1,99 @@
+{
+  "visualization": {
+    "type": "histogram",
+    "title": "Distribution of reported trial enrollment sizes",
+    "encoding": {
+      "x": {
+        "field": "bin_lower",
+        "type": "quantitative",
+        "title": "Enrollment (participants)"
+      },
+      "x2": {
+        "field": "bin_upper",
+        "type": "quantitative",
+        "title": "Upper enrollment bound (exclusive)"
+      },
+      "y": {
+        "field": "trial_count",
+        "type": "quantitative",
+        "title": "Unique studies"
+      }
+    },
+    "data": [
+      {
+        "bin_label": "0–9",
+        "bin_lower": 0,
+        "bin_upper": 10,
+        "trial_count": 0
+      },
+      {
+        "bin_label": "10–49",
+        "bin_lower": 10,
+        "bin_upper": 50,
+        "trial_count": 1
+      },
+      {
+        "bin_label": "50–99",
+        "bin_lower": 50,
+        "bin_upper": 100,
+        "trial_count": 0
+      },
+      {
+        "bin_label": "100–499",
+        "bin_lower": 100,
+        "bin_upper": 500,
+        "trial_count": 1
+      },
+      {
+        "bin_label": "500–999",
+        "bin_lower": 500,
+        "bin_upper": 1000,
+        "trial_count": 0
+      },
+      {
+        "bin_label": "1000–4999",
+        "bin_lower": 1000,
+        "bin_upper": 5000,
+        "trial_count": 0
+      },
+      {
+        "bin_label": "5000+",
+        "bin_lower": 5000,
+        "bin_upper": null,
+        "trial_count": 1
+      }
+    ]
+  },
+  "meta": {
+    "source": "ClinicalTrials.gov Data API v2",
+    "filters": {
+      "drug_name": null,
+      "condition": null,
+      "country": null,
+      "sponsor": "Synthetic Research Institute",
+      "trial_status": null,
+      "start_year": null,
+      "end_year": null
+    },
+    "counting_unit": "unique NCT IDs per enrollment bin",
+    "grouping": "enrollment_count",
+    "retrieved_studies": 3,
+    "total_matches": 3,
+    "complete_results": true,
+    "warnings": [
+      "Enrollment is the reported participant count, not a patient-outcome measure. Reported enrollment may be ACTUAL or ESTIMATED; estimates are not observed enrollment. Types are combined in bins and counted separately in metadata. Bins include their lower bound and exclude their upper bound; null means unbounded.",
+      "Sponsor search includes sponsors and collaborators."
+    ],
+    "comparison_field": null,
+    "cohorts": [],
+    "overlap_studies": null,
+    "histogram": {
+      "included_studies": 3,
+      "excluded_studies": 0,
+      "actual_studies": 0,
+      "estimated_studies": 3,
+      "unknown_type_studies": 0
+    },
+    "graph": null
+  }
+}

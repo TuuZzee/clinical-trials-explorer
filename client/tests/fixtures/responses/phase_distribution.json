@@ -1,0 +1,48 @@
+{
+  "visualization": {
+    "type": "bar_chart",
+    "title": "Study phase distribution",
+    "encoding": {
+      "x": {
+        "field": "phase",
+        "type": "ordinal",
+        "title": "Clinical trial phase"
+      },
+      "y": {
+        "field": "trial_count",
+        "type": "quantitative",
+        "title": "Unique studies"
+      },
+      "series": null
+    },
+    "data": [
+      {
+        "phase": "Phase 2",
+        "trial_count": 2
+      }
+    ]
+  },
+  "meta": {
+    "source": "ClinicalTrials.gov Data API v2",
+    "filters": {
+      "drug_name": null,
+      "condition": null,
+      "country": null,
+      "sponsor": "Synthetic Research Institute",
+      "trial_status": null,
+      "start_year": null,
+      "end_year": null
+    },
+    "counting_unit": "unique NCT IDs per phase",
+    "grouping": "phase",
+    "retrieved_studies": 2,
+    "total_matches": 2,
+    "complete_results": true,
+    "warnings": ["Sponsor search includes sponsors and collaborators."],
+    "comparison_field": null,
+    "cohorts": [],
+    "overlap_studies": null,
+    "histogram": null,
+    "graph": null
+  }
+}

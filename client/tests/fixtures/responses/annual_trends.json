@@ -1,0 +1,55 @@
+{
+  "visualization": {
+    "type": "time_series",
+    "title": "Study counts by study start year",
+    "encoding": {
+      "x": {
+        "field": "start_year",
+        "type": "temporal",
+        "title": "Study start year"
+      },
+      "y": {
+        "field": "trial_count",
+        "type": "quantitative",
+        "title": "Unique studies"
+      },
+      "series": null
+    },
+    "data": [
+      {
+        "start_year": "2019-01-01",
+        "trial_count": 1
+      },
+      {
+        "start_year": "2023-01-01",
+        "trial_count": 2
+      }
+    ]
+  },
+  "meta": {
+    "source": "ClinicalTrials.gov Data API v2",
+    "filters": {
+      "drug_name": null,
+      "condition": null,
+      "country": null,
+      "sponsor": "Synthetic Research Institute",
+      "trial_status": null,
+      "start_year": null,
+      "end_year": null
+    },
+    "counting_unit": "unique NCT IDs per start_year",
+    "grouping": "start_year",
+    "retrieved_studies": 3,
+    "total_matches": 3,
+    "complete_results": true,
+    "warnings": [
+      "Annual values refer to study start dates, not posting or completion dates; only observed years are emitted.",
+      "Sponsor search includes sponsors and collaborators."
+    ],
+    "comparison_field": null,
+    "cohorts": [],
+    "overlap_studies": null,
+    "histogram": null,
+    "graph": null
+  }
+}
