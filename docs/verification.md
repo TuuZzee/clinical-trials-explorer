@@ -22,8 +22,7 @@ The [client checks](../client/README.md#verify) include **17 Playwright cases** 
 the production build, server-side proxy, and all five chart renderers. The browser
 suite uses [synthetic fixtures](../client/tests/fixtures/README.md) through a
 local HTTP fixture server. The backend suite checks these responses against the
-API models. GitHub Actions runs both suites on the development and main branches
-and on pull requests targeting either branch.
+API models. GitHub Actions runs both suites on pull requests targeting main branch.
 
 ### Test responsibilities
 
